@@ -63,11 +63,15 @@
     <Content Include="images\smalllogo.scale-100.png" />
     <Content Include="images\splashscreen.scale-100.png" />
     <Content Include="images\storelogo.scale-100.png" />
+    <Content Include="js\Acciones.js" />
     <Content Include="js\default.js" />
     <Content Include="js\Modelo.js" />
     <Content Include="js\navigator.js" />
     <Content Include="js\Servicio.js" />
     <Content Include="packages.config" />
+    <Content Include="pages\alta\alta.css" />
+    <Content Include="pages\alta\alta.html" />
+    <Content Include="pages\alta\alta.js" />
     <Content Include="pages\home\home.css" />
     <Content Include="pages\home\home.html" />
     <Content Include="pages\home\home.js" />
@@ -92,6 +96,10 @@
       <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsStore.0.13.2-build00132\lib\win81\Microsoft.ApplicationInsights.Extensibility.Windows.winmd</HintPath>
       <IsWinMDFile>true</IsWinMDFile>
       <CopyLocal>True</CopyLocal>
+    </Reference>
+    <Reference Include="RuntimeAzureStorage">
+      <HintPath>..\..\RuntimeAzureStorage\RuntimeAzureStorage\bin\Debug\RuntimeAzureStorage.winmd</HintPath>
+      <IsWinMDFile>true</IsWinMDFile>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />

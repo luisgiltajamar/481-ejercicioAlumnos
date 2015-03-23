@@ -14,17 +14,30 @@
     <script src="/pages/home/home.js"></script>
 </head>
 <body>
-    <!-- The content that will be loaded and displayed. -->
-    <div class="fragment homepage">
-        <header aria-label="Header content" role="banner">
-            <button data-win-control="WinJS.UI.BackButton"></button>
-            <h1 class="titlearea win-type-ellipsis">
-                <span class="pagetitle">Welcome to AppAlumnos!</span>
-            </h1>
-        </header>
-        <section aria-label="Main content" role="main">
-            <p>Content goes here.</p>
-        </section>
+    <div id="templateAlumnos" data-win-control="WinJS.Binding.Template">
+        <div>
+            <img data-win-bind="src:foto"/>
+            <div >
+                <span data-win-bind="innerText:nombre"></span>
+                <span data-win-bind="innerText:curso"></span>
+                <span data-win-bind="innerText:nota"></span>
+            </div>
+        </div>
     </div>
+<!-- The content that will be loaded and displayed. -->
+<div class="fragment homepage">
+    <header aria-label="Header content" role="banner">
+        <button data-win-control="WinJS.UI.BackButton"></button>
+        <h1 class="titlearea win-type-ellipsis">
+            <span class="pagetitle">Welcome to AppAlumnos!</span>
+        </h1>
+    </header>
+    <section aria-label="Main content" role="main">
+        <div id="listaAlumnos" data-win-control="WinJS.UI.ListView"
+             data-win-options="{itemDataSource:Datos.Alumnos.dataSource,
+             itemTemplate: select('#templateAlumnos'),
+             layout:{type: WinJS.UI.CellSpanningLayout}}"></div>
+    </section>
+</div>
 </body>
 </html>

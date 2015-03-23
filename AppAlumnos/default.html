@@ -8,16 +8,30 @@
     <link href="//Microsoft.WinJS.2.0/css/ui-dark.css" rel="stylesheet" />
     <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
     <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
-
+    <script src="js/Modelo.js"></script>
+    <script src="js/Servicio.js"></script>
+    <script src="js/Acciones.js"></script>
     <!-- AppAlumnos references -->
     <link href="/css/default.css" rel="stylesheet" />
     <script src="/js/default.js"></script>
     <script src="/js/navigator.js"></script>
 </head>
 <body>
-    <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/home/home.html'}"></div>
-    <!-- <div id="appbar" data-win-control="WinJS.UI.AppBar">
-        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmd', label:'Command', icon:'placeholder'}" type="button"></button>
-    </div> -->
+<div id="flyBuscar" data-win-control="WinJS.UI.Flyout">
+    <input type="text" id="txtBusqueda" placeholder="curso"/>
+    <button id="btnBus">Buscar</button>
+    <button id="btnLim">Limpiar</button>
+</div>
+
+
+<div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/home/home.html'}"></div>
+<div id="appbar" data-win-control="WinJS.UI.AppBar">
+    <button data-win-control="WinJS.UI.AppBarCommand"
+            data-win-options="{id:'cmdBus', label:'Buscar', icon:'find'}" 
+            type="button"></button>
+    <button data-win-control="WinJS.UI.AppBarCommand"
+            data-win-options="{id:'cmdAdd', label:'Añadir', icon:'add'}" 
+            type="button"></button>
+</div>
 </body>
 </html>
